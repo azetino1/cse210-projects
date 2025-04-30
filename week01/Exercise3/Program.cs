@@ -13,7 +13,7 @@ class Program
         // Random randomGenerator = new Random();
         //int magicNumber = randomGenerator.Next(1, 101);
 
-        int guess = -1;
+        //int guess = -1;
 
         // We could also use a do-while loop here...
         //while (guess != magicNumber)
@@ -21,7 +21,7 @@ class Program
 
  
         Console.Write("What is your guess? ");
-         guess = int.Parse(Console.ReadLine());
+         int guess = int.Parse(Console.ReadLine());
 
         
         if (guess < magicNumber)
