@@ -10,16 +10,7 @@ class Program
         Console.Write("What is the magic number? ");
         int magicNumber = int.Parse(Console.ReadLine());
 
-        // Random randomGenerator = new Random();
-        //int magicNumber = randomGenerator.Next(1, 101);
-
-        //int guess = -1;
-
-        // We could also use a do-while loop here...
-        //while (guess != magicNumber)
         
-
- 
         Console.Write("What is your guess? ");
          int guess = int.Parse(Console.ReadLine());
 
@@ -37,6 +28,6 @@ class Program
             Console.WriteLine("You guessed it!");
         }
 
-        }
-
     }
+}
+    
