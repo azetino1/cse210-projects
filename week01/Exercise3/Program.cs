@@ -6,11 +6,14 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
+        // Prompt the user for a guess
         Console.Write("What is the magic number? ");
-        int magicNumber = Convert.ToInt32(Console.ReadLine());
+        int magicNumber = int.Parse(Console.ReadLine());
 
+ 
         Console.Write("What is your guess? ");
-        int guess = Convert.ToInt32(Console.ReadLine());
+        int guess = int.Parse(Console.ReadLine());
+
         
         if (guess < magicNumber)
         {
@@ -25,5 +28,10 @@ class Program
             Console.WriteLine("You guessed it!");
         }
     }
-
 }
+    
+
+
+
+    
+    
