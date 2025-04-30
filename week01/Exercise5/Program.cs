@@ -2,7 +2,8 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void DisplayWelcome()
+
     {
         Console.WriteLine("Hello World! This is the Exercise5 Project.");
 
