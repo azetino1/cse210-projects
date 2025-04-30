@@ -21,7 +21,7 @@ class Program
             numbers.Add(input);
         }
 
-        if (numbers.Count > 0) // Ensure list has elements before calculations
+        if (numbers.Count > 0) // Ensures list has elements before calculations
         {
             int sum = numbers.Sum();
             double average = numbers.Average();
