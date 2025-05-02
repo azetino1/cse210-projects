@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-
 public class Resume
 {
     public string _personName;
