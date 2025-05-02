@@ -4,55 +4,24 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Resumes Project.");
+        // Create first job instance
+        Job job1 = new Job();
+        job1._jobTitle = "Software Engineer";
+        job1._company = "Microsoft";
+        job1._startYear = 2019;
+        job1._endYear = 2022;
+        
+        // Display the company name of job1
+        Console.WriteLine(job1._company);
 
-        Resume resume = new Resume("Allison Rose");
-        resume.Jobs.Add(new Job("Software Engineer", "Microsoft", 2019, 2022));
-        resume.Jobs.Add(new Job("Manager (Apple)", "Microsoft", 2022, 2023));
-       
-        resume.Display();
+        // Create second job instance
+        Job job2 = new Job();
+        job2._jobTitle = "Senior Developer";
+        job2._company = "Apple";
+        job2._startYear = 2023;
+        job2._endYear = 2025;
+
+        // Display the company name of job2
+        Console.WriteLine(job2._company);
     }
 }
-
-public class Job
-{
-    public string JobTitle { get; set; }
-    public string Company { get; set; }
-    public int StartYear { get; set; }
-    public int EndYear { get; set; }
-
-    public Job(string jobTitle, string company, int startYear, int endYear)
-    {
-        JobTitle = jobTitle;
-        Company = company;
-        StartYear = startYear;
-        EndYear = endYear;
-    }
-
-    public void Display()
-    {
-        Console.WriteLine($"{JobTitle} ({Company}) {StartYear}-{EndYear}");
-    }
-}
-
-public class Resume
-{
-    public string PersonName { get; set; }
-    public List<Job> Jobs { get; set; } = new List<Job>();
-
-    public Resume(string personName)
-    {
-        PersonName = personName;
-    }
-
-    public void Display()
-    {
-        Console.WriteLine($"Resume of {PersonName}");
-        foreach (var job in Jobs)
-        {
-            job.Display();
-        }
-    }
-}
-
-    
