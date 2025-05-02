@@ -6,9 +6,9 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Resumes Project.");
 
-        Resume resume = new Resume("John Doe");
+        Resume resume = new Resume("Allison Rose");
         resume.Jobs.Add(new Job("Software Engineer", "Microsoft", 2019, 2022));
-         resume.Jobs.Add(new Job("Manager (Apple)", "Microsoft", 2022, 2023));
+        resume.Jobs.Add(new Job("Manager (Apple)", "Microsoft", 2022, 2023));
        
         resume.Display();
     }
