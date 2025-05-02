@@ -8,6 +8,7 @@ class Program
 
         Resume resume = new Resume("John Doe");
         resume.Jobs.Add(new Job("Software Engineer", "Microsoft", 2019, 2022));
+         resume.Jobs.Add(new Job("Manager (Apple)", "Microsoft", 2022, 2023));
        
         resume.Display();
     }
