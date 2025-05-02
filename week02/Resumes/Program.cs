@@ -4,10 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-       using System;
-
-class Program
-{
+  
         // Create first job instance
         Job job1 = new Job();
         job1._jobTitle = "Software Engineer";
@@ -22,8 +19,8 @@ class Program
         Job job2 = new Job();
         job2._jobTitle = "Senior Developer";
         job2._company = "Apple";
-        job2._startYear = 2023;
-        job2._endYear = 2025;
+        job2._startYear = 2022;
+        job2._endYear = 2023;
 
         // Display job2 details
         job2.Display();
