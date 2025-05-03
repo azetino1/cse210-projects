@@ -5,17 +5,20 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
+        Console.WriteLine("Hello Welcome to the Journal Program!");
+        Console.WriteLine("Please select one of the following choices.");
+
          Journal journal = new Journal();
-        bool running = true;
+         bool running = true;
 
         while (running)
         {
             Console.WriteLine("\nJournal Menu:");
-            Console.WriteLine("1. Write a new entry");
-            Console.WriteLine("2. Display journal");
-            Console.WriteLine("3. Save journal to file");
-            Console.WriteLine("4. Load journal from file");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
             Console.Write("Choose an option: ");
             
             string choice = Console.ReadLine();
