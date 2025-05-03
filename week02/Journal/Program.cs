@@ -13,7 +13,6 @@ class Program
 
         while (running)
         {
-            Console.WriteLine("\nJournal Menu:");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
