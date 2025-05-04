@@ -4,15 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Journal Project.");
+        //Greetings
         Console.WriteLine("Hello Welcome to the Journal Program!");
         Console.WriteLine("Please select one of the following choices.");
 
+         //Initializes the Journal class 
          Journal journal = new Journal();
+
+         //Acts as a control variable for looping through the menu
          bool running = true;
 
+        //Keeps the program running until option Quit is selected
         while (running)
-        {
+        {    
+            // Options
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
@@ -20,6 +25,7 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("what would you like to do?: ");
             
+            //input handling for accuracy and error 
             string choice = Console.ReadLine();
             switch (choice)
             {
