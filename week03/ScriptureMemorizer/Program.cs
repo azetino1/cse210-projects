@@ -5,7 +5,7 @@ class Program
     static void Main()
     {
         Reference ref1 = new Reference("Proverbs", 3, 5, 6);
-        Scripture scripture = new Scripture(ref1, "Trust in the LORD with all your heart and lean not on your own understanding; in all thy ways acknowledge him, and he shall direct thy paths");
+        Scripture scripture = new Scripture(ref1, "Trust in the LORD with all your heart and lean not on your own understanding; in all thy ways acknowledge him, and he shall direct thy paths.");
 
         while (!scripture.AllWordsHidden())
         {
