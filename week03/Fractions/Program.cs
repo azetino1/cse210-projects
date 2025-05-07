@@ -1,51 +1,22 @@
-using System;
-
-public class Fraction
+class Program
 {
-    private int _numerator;
-    private int _denominator;
-
-    // Constructors
-    public Fraction() : this(1, 1) { }
-
-    public Fraction(int numerator) : this(numerator, 1) { }
-
-    public Fraction(int numerator, int denominator)
+    static void Main()
     {
-        if (denominator == 0)
-            throw new ArgumentException("Denominator cannot be zero.");
-        
-        _numerator = numerator;
-        _denominator = denominator;
-    }
+        Fraction fraction1 = new Fraction();
+        Fraction fraction2 = new Fraction(5);
+        Fraction fraction3 = new Fraction(3, 4);
+        Fraction fraction4 = new Fraction(1, 3);
 
-    // Getters and Setters
-    public int Numerator
-    {
-        get { return _numerator; }
-        set { _numerator = value; }
-    }
+        Console.WriteLine(fraction1.GetFractionString()); // Output: 1/1
+        Console.WriteLine(fraction1.GetDecimalValue()); // Output: 1
 
-    public int Denominator
-    {
-        get { return _denominator; }
-        set
-        {
-            if (value == 0)
-                throw new ArgumentException("Denominator cannot be zero.");
-            _denominator = value;
-        }
-    }
+        Console.WriteLine(fraction2.GetFractionString()); // Output: 5/1
+        Console.WriteLine(fraction2.GetDecimalValue()); // Output: 5
 
-    // Method to return fractional representation
-    public string GetFractionString()
-    {
-        return $"{_numerator}/{_denominator}";
-    }
+        Console.WriteLine(fraction3.GetFractionString()); // Output: 3/4
+        Console.WriteLine(fraction3.GetDecimalValue()); // Output: 0.75
 
-    // Method to return decimal representation
-    public double GetDecimalValue()
-    {
-        return (double)_numerator / _denominator;
+        Console.WriteLine(fraction4.GetFractionString()); // Output: 1/3
+        Console.WriteLine(fraction4.GetDecimalValue()); // Output: 0.3333333333333333
     }
 }
