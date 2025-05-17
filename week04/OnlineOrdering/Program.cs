@@ -18,7 +18,7 @@ class Comment
     }
 }
 
-// Video class without inheritance
+// Video reference
 class Video
 {
     public string Title { get; set; }
@@ -66,10 +66,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Display introduction
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
-        Console.WriteLine("This program tracks YouTube videos and their comments.\n");
-
         // List to store videos
         List<Video> videos = new List<Video>
         {
