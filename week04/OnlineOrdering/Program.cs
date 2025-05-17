@@ -1,22 +1,5 @@
 using System;
 
-
-// Abstract class representing a general Media item
-abstract class Media
-{
-    public string Title { get; set; }
-    public string Author { get; set; }
-
-    public Media(string title, string author)
-    {
-        Title = title;
-        Author = author;
-    }
-
-    // Abstract method: forces child classes to define their own version
-    public abstract void DisplayInfo();
-}
-
 // Comment class (stores comment details)
 class Comment
 {
@@ -35,14 +18,18 @@ class Comment
     }
 }
 
-// Video class (inherits from Media)
-class Video : Media
+// Video class without inheritance
+class Video
 {
+    public string Title { get; set; }
+    public string Author { get; set; }
     public int LengthInSeconds { get; set; }
     private List<Comment> comments;
 
-    public Video(string title, string author, int lengthInSeconds) : base(title, author)
+    public Video(string title, string author, int lengthInSeconds)
     {
+        Title = title;
+        Author = author;
         LengthInSeconds = lengthInSeconds;
         comments = new List<Comment>();
     }
@@ -59,8 +46,8 @@ class Video : Media
         return comments.Count;
     }
 
-    // Overridden method to display video details
-    public override void DisplayInfo()
+    // Method to display video details
+    public void DisplayInfo()
     {
         Console.WriteLine($"Title: {Title}, Author: {Author}, Length: {LengthInSeconds} sec");
         Console.WriteLine($"Number of Comments: {GetCommentCount()}");
