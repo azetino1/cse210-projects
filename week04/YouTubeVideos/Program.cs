@@ -133,8 +133,8 @@ class Program
     static void Main(string[] args)
     {
         // Create customers
-        Customer customer1 = new Customer("Alice Johnson", new Address("123 Main St", "Seattle", "WA", "USA"));
-        Customer customer2 = new Customer("Bob Lee", new Address("45 Maple Rd", "Toronto", "ON", "Canada"));
+        Customer customer1 = new Customer("Maria Sanchez", new Address("123 Main St", "Las Vegas", "NV", "USA"));
+        Customer customer2 = new Customer("Robert Wiat", new Address("45 Maple Rd", "San Francisco", "CA", "USA"));
 
         // Create orders
         Order order1 = new Order(customer1);
