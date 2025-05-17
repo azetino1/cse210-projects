@@ -145,7 +145,8 @@ class Program
 
         Order order2 = new Order(customer2);
         order2.AddProduct(new Product("Headphones", 201, 150m, 1));
-        order2.AddProduct(new Product("Monitor", 202, 300m, 1));
+        order2.AddProduct(new Product("Monitor", 202, 199m, 1));
+        order2.AddProduct(new Product("Airpods Pro", 203, 249m, 1));
 
         // Display results
         Console.WriteLine(order1.GetPackingLabel());
