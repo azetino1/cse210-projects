@@ -9,19 +9,19 @@ class Program
 }
 
 // Abstract class defining a Media entity
-abstract class Media
-{
-    public string Title { get; set; }
-    public string Author { get; set; }
-
-    public Media(string title, string author)
+    abstract class Media
     {
-        Title = title;
-        Author = author;
-    }
+        public string Title { get; set; }
+        public string Author { get; set; }
 
-    public abstract void DisplayInfo(); // Abstract method to enforce implementation in derived classes
-}
+        public Media(string title, string author)
+        {
+            Title = title;
+            Author = author;
+        }
+
+        public abstract void DisplayInfo(); // Abstract method to enforce implementation in derived classes
+    }
 
 // Comment class
 class Comment
@@ -74,8 +74,7 @@ class Video : Media
         }
 
         Console.WriteLine();
-    }
-}
+    
 
 // Program execution
 class Program
