@@ -140,7 +140,7 @@ class Program
         Order order1 = new Order(customer1);
         order1.AddProduct(new Product("Laptop", 101, 1200m, 1));
         order1.AddProduct(new Product("Mouse", 102, 25m, 2));
-        order1.AddProduct(new Product("Printer", 103, 350m, 3));
+        order1.AddProduct(new Product("Printer", 103, 350m, 1));
 
 
         Order order2 = new Order(customer2);
