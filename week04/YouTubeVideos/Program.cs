@@ -77,7 +77,7 @@ class Program
         // Adding comments to videos
         videos[0].AddComment(new Comment("Mark", "Indeed, what a great nation it is."));
         videos[0].AddComment(new Comment("Bob", "Great video!"));
-        videos[0].AddComment(new Comment("Fernando", "Grateful for the opportunities"));
+        videos[0].AddComment(new Comment("Fernando", "Grateful for the opportunities."));
 
         videos[1].AddComment(new Comment("David", "This recipe looks delicious!"));
         videos[1].AddComment(new Comment("Nancy", "I tried this, and it's amazing."));
