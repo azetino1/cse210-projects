@@ -1,6 +1,6 @@
 using System;
 
-// Comment class (stores comment details)
+// stores comment details
 class Comment
 {
     public string CommenterName { get; set; }
