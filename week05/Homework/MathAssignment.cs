@@ -1,4 +1,4 @@
-public class MathAssignment : HomeworkAssignment
+public class MathAssignment : Assignment
 {
     public string TextbookSection { get; }
     public string Problems { get; }

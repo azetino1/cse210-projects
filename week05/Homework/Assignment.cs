@@ -1,4 +1,4 @@
-public class HomeworkAssignment
+public class Assignment
 {
     public string StudentName { get; }
     public string Topic { get; }
