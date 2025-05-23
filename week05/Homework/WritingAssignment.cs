@@ -1,4 +1,5 @@
-public class WritingAssignment : HomeworkAssignment
+public class WritingAssignment : Assignment
+
 {
     public string Title { get; }
 
