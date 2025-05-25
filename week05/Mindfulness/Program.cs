@@ -10,7 +10,15 @@ class Program
             Console.Clear();
             Console.WriteLine("Menu Option:");
             Console.WriteLine("1 - Breathing Activity");
+            Console.WriteLine("2 - Reflecting Activity");
+            Console.WriteLine("3 - Listing Activity");
+            Console.WriteLine("4 - Quit the program");
+            string choice = Console.ReadLine();
 
+
+            switch (choice)
+            {
+                
 
         }
 
