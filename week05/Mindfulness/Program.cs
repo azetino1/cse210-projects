@@ -8,7 +8,7 @@ class Program
         while (running)
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the Mindfullness Program. Choose from the following:");
+            Console.WriteLine("Menu Option:");
             Console.WriteLine("1 - Breathing Activity");
 
 
