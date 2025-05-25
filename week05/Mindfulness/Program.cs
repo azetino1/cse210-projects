@@ -8,7 +8,7 @@ class Program
         while (running)
         {
             Console.Clear();
-            Console.WriteLine("Menu Option:");
+            Console.WriteLine("Menu Options. Choose one:");
             Console.WriteLine("1 - Breathing Activity");
             Console.WriteLine("2 - Reflecting Activity");
             Console.WriteLine("3 - Listing Activity");
