@@ -1,9 +1,9 @@
-public class ReflectingActivity : Activity
+public class ReflectionActivity : Activity
 {
     private List<string> _prompts = new List<string>();
     private List<string> _questions = new List<string>();
 
-    public ReflectingActivity(string name, string description) : base(name, description)
+    public ReflectionActivity(string name, string description) : base(name, description)
     {
         //Lists with prompts and questions
         _prompts.Add("Think of a time when you stood up for someone else.");
