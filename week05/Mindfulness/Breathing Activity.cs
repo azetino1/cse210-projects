@@ -11,14 +11,14 @@ public class BreathingActivity : Activity
             DisplayStartingMessage();
 
             int seconds = 0;
-            while (seconds < _duration) //For the specified duration, do the activity
+            while (seconds < _duration) 
             {
                 Console.Clear();
                 Console.Write("Breathe in  ");
                 for (int i = 0; i < 4; i++)
                 {
-                    if (seconds >= _duration) { break; } //If the specified duration passes at any point, itll break the loop!
-                    Console.Write("."); // Every second add a dot.
+                    if (seconds >= _duration) { break; } 
+                    Console.Write("."); 
                     Thread.Sleep(1000);
                     seconds++;
                 }
