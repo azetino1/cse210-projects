@@ -5,7 +5,7 @@ public class ReflectingActivity : Activity
 
     public ReflectingActivity(string name, string description) : base(name, description)
     {
-        //Makes the lists with prompts and questions
+        //Lists with prompts and questions
         _prompts.Add("Think of a time when you stood up for someone else.");
         _prompts.Add("Think of a time when you did something really difficult.");
         _prompts.Add("Think of a time when you helped someone in need.");
