@@ -19,3 +19,25 @@ public class GoalManager
         bool validInput = false; // This is for error checking, if the user enters an incorrect number. 
         Console.WriteLine("Enter a number (1 = Simple goal, 2 = Eternal goal, 3 = Checklist goal):");
         string a = Console.ReadLine();
+
+        while (!validInput)
+        {
+            switch (a)
+            {
+                case "1":
+                    Console.WriteLine("Simple goal. Great!");
+                    validInput = true;
+                    break;
+                case "2":
+                    Console.WriteLine("Eternal goal. Great!");
+                    validInput = true;
+                    break;
+                case "3":
+                    Console.WriteLine("Checklist goal. Great!");
+                    validInput = true;
+                    break;
+                default:
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    break;
+            }
+        }
