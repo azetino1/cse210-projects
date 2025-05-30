@@ -16,7 +16,7 @@ public class GoalManager
         Console.WriteLine("2) Eternal Goal - Continue to work on this goal");
         Console.WriteLine("3) Checklist Goal - Do this goal a certain number of times");
 
-        bool validInput = false; // This is for error checking, if the user enters an incorrect number. 
+        bool validInput = false; 
         Console.WriteLine("Enter a number (1 = Simple goal, 2 = Eternal goal, 3 = Checklist goal):");
         string a = Console.ReadLine();
 
@@ -65,3 +65,33 @@ public class GoalManager
                 break;
         }
     }
+
+    public int StringtoIntErrorCheck(string text)
+    
+    {
+        bool validInput = false;
+        int num = 0;
+        while (!validInput)
+        {
+            Console.WriteLine(text);
+            string numString = Console.ReadLine();
+            try
+            {
+                int.TryParse(numString, out num);
+                if (num <= 0)
+                {
+                    Console.WriteLine("Incorrect Response. You need to enter a whole number above 0");
+                }
+                else
+                {
+                    validInput = true;
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Incorrect Response. You need to enter a whole number above 0");
+            }
+        }
+        return num;
+    }
+}
