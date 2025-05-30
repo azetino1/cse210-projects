@@ -11,7 +11,12 @@ public abstract class Goal
         _isComplete = false;
     }
 
-    // Expose properties safely
-    public string Name => _name;
-    public int Points => _points;
+    // Mark as abstract if every derived class must implement it
+    public abstract void RecordProgress();
+
+    // Mark as virtual if derived classes can override but don't have to
+    public virtual void DisplayStatus()
+    {
+        Console.WriteLine($"{_name} - {(_isComplete ? "[X] Completed" : "[ ] In Progress")}");
+    }
 }
