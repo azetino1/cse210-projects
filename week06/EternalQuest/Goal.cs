@@ -1,8 +1,8 @@
 public abstract class Goal
 {
-    public string _name;
-    public int _points;
-    public bool _isComplete;
+    protected string _name;
+    protected int _points;
+    protected bool _isComplete;
 
     public Goal(string name, int points)
     {
@@ -11,10 +11,7 @@ public abstract class Goal
         _isComplete = false;
     }
 
-    public abstract void RecordProgress();
-
-    public virtual void DisplayStatus()
-    {
-        Console.WriteLine($"{_name} - {(_isComplete ? "[X] Completed" : "[ ] In Progress")}");
-    }
+    // Expose properties safely
+    public string Name => _name;
+    public int Points => _points;
 }
