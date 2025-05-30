@@ -10,3 +10,16 @@ public abstract class Goal
         _description = desc;
         _points = points; 
     }
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public abstract bool IsComplete();
+
+    public abstract int RecordEvent();
+
+    public abstract string GetStringRepresentation();
+
+    
+}
