@@ -4,7 +4,8 @@ public class EternalGoal : Goal
 
     public EternalGoal(string name, string desc, int points) : base(name, desc, points)
     {
-        //Constructor mirrors the base Goal class
+        
+        
     }
     
     public override bool IsComplete()

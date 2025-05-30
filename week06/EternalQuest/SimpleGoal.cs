@@ -1,10 +1,11 @@
 public class SimpleGoal : Goal
 {
-    private bool _isComplete; 
+    private bool _isComplete;
 
     public SimpleGoal(string name, string desc, int points) : base(name, desc, points)
     {
-        //Constructor is identical to the base Goal class
+        
+        
     }
 
      public override bool IsComplete()
