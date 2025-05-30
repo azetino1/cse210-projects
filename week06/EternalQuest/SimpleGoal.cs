@@ -14,7 +14,15 @@ public class SimpleGoal : Goal
 
     public override int RecordEvent()
     {
-        //The simple goal is now completed. We will mark it as done, and return how any points it is worth.
+        
         _isComplete = true;
         return _points;
     }
+
+     public override string GetStringRepresentation()
+    {
+        return $"Goal: {_name}\nDescription: {_description}\nType: Simple\nCompleted:{_isComplete}";
+    }
+
+    
+}
