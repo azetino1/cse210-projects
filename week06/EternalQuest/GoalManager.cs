@@ -1,97 +1,32 @@
+using System;
+using System.Collections.Generic;
+
 public class GoalManager
 {
     private List<Goal> _goals = new List<Goal>();
-    private int _score = 0;
+    private int _score;
 
-    public GoalManager()
+    public void AddGoal(Goal goal)
     {
-
+        _goals.Add(goal);
     }
 
-    public void CreateGoal()
+    public void RecordGoalProgress(string goalName)
     {
-        Console.Clear();
-        Console.WriteLine("Lets create a goal!\n What type of goal would you like to add? (Enter Number)");
-        Console.WriteLine("1) Simple Goal - Do this goal once");
-        Console.WriteLine("2) Eternal Goal - Continue to work on this goal");
-        Console.WriteLine("3) Checklist Goal - Do this goal a certain number of times");
-
-        bool validInput = false; 
-        Console.WriteLine("Enter a number (1 = Simple goal, 2 = Eternal goal, 3 = Checklist goal):");
-        string a = Console.ReadLine();
-
-        while (!validInput)
+        Goal goal = _goals.Find(g => g._name == goalName);
+        if (goal != null)
         {
-            switch (a)
-            {
-                case "1":
-                    Console.WriteLine("Simple goal. Great!");
-                    validInput = true;
-                    break;
-                case "2":
-                    Console.WriteLine("Eternal goal. Great!");
-                    validInput = true;
-                    break;
-                case "3":
-                    Console.WriteLine("Checklist goal. Great!");
-                    validInput = true;
-                    break;
-                default:
-                    Console.WriteLine("Invalid input. Please enter a valid number.");
-                    break;
-            }
-        }
-
-         Console.WriteLine("What do you want to call this goal?");
-        string name = Console.ReadLine();
-
-        Console.WriteLine("Give a description of this goal.");
-        string desc = Console.ReadLine();
-
-        int points = StringtoIntErrorCheck("How many points should this goal be worth every time you complete it?");
-
-        switch (a)
-        {
-            case "1": //Simple Goal
-                SimpleGoal sg = new SimpleGoal(name, desc, points);
-                break;
-            case "2":
-                EternalGoal eg = new EternalGoal(name, desc, points);
-                break;
-            case "3":
-                int target = StringtoIntErrorCheck("What is your target for how many times to complete the goal?");
-                int bonus = StringtoIntErrorCheck("When you reach your target, how many bonus points should you get?");
-                ChecklistGoal cg = new ChecklistGoal(name, desc, points, target, bonus);
-                break;
+            goal.RecordProgress();
+            _score += goal._points;
         }
     }
 
-    public int StringtoIntErrorCheck(string text)
-    
+    public void DisplayGoals()
     {
-        bool validInput = false;
-        int num = 0;
-        while (!validInput)
+        foreach (Goal goal in _goals)
         {
-            Console.WriteLine(text);
-            string numString = Console.ReadLine();
-            try
-            {
-                int.TryParse(numString, out num);
-                if (num <= 0)
-                {
-                    Console.WriteLine("Incorrect Response. You need to enter a whole number above 0");
-                }
-                else
-                {
-                    validInput = true;
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Incorrect Response. You need to enter a whole number above 0");
-            }
+            goal.DisplayStatus();
         }
-        return num;
+        Console.WriteLine($"Total Score: {_score}");
     }
 }
