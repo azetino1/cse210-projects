@@ -1,8 +1,8 @@
 public abstract class Goal
 {
     public string _name;
-    protected int _points;
-    protected bool _isComplete;
+    public int _points;
+    public bool _isComplete;
 
     public Goal(string name, int points)
     {
