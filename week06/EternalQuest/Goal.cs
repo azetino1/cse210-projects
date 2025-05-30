@@ -1,25 +1,20 @@
 public abstract class Goal
 {
     protected string _name;
-    protected string _description;
     protected int _points;
+    protected bool _isComplete;
 
-    public Goal(string name, string desc, int points)
+    public Goal(string name, int points)
     {
         _name = name;
-        _description = desc;
-        _points = points; 
+        _points = points;
+        _isComplete = false;
     }
-    public string GetName()
+
+    public abstract void RecordProgress();
+
+    public virtual void DisplayStatus()
     {
-        return _name;
+        Console.WriteLine($"{_name} - {(_isComplete ? "[X] Completed" : "[ ] In Progress")}");
     }
-
-    public abstract bool IsComplete();
-
-    public abstract int RecordEvent();
-
-    public abstract string GetStringRepresentation();
-
-    
 }
