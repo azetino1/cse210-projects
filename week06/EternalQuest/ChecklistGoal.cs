@@ -1,36 +1,30 @@
 public class ChecklistGoal : Goal
 {
-    private int _amountCompleted; 
-    private int _target; 
-    private int _bonus; 
+    private int _requiredCount;
+    private int _completedCount;
+    private int _bonus;
 
-    public ChecklistGoal(string name, string desc, int points, int target, int bonus) : base(name, desc, points)
+    public ChecklistGoal(string name, int points, int requiredCount, int bonus) 
+        : base(name, points)
     {
-        _target = target;
+        _requiredCount = requiredCount;
+        _completedCount = 0;
         _bonus = bonus;
     }
 
-    public override bool IsComplete()
+    public override void RecordProgress()
     {
-        if (_amountCompleted < _target)
-        {
-            return false;
-        }
-        return true;
-    }
-     public override int RecordEvent()
-    {
-       
-        _amountCompleted++;
-        if(_amountCompleted == _target){
-            return _points + _bonus; 
-        }
-        return _points;
+        _completedCount++;
+        int totalPoints = (_completedCount == _requiredCount) ? _points + _bonus : _points;
+
+        Console.WriteLine($"You recorded progress for {_name}. Total points earned: {totalPoints}");
+
+        if (_completedCount >= _requiredCount)
+            _isComplete = true;
     }
 
-    public override string GetStringRepresentation() {
-        return $"Goal: {_name}\nDescription: {_description}\nType: Checklist\nCompleted:{IsComplete()}";
+    public override void DisplayStatus()
+    {
+        Console.WriteLine($"{_name} - Completed {_completedCount}/{_requiredCount} times {(_isComplete ? "[X] Finished" : "[ ] Still working")}");
     }
-
-    
 }
