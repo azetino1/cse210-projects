@@ -41,3 +41,27 @@ public class GoalManager
                     break;
             }
         }
+
+         Console.WriteLine("What do you want to call this goal?");
+        string name = Console.ReadLine();
+
+        Console.WriteLine("Give a description of this goal.");
+        string desc = Console.ReadLine();
+
+        int points = StringtoIntErrorCheck("How many points should this goal be worth every time you complete it?");
+
+        switch (a)
+        {
+            case "1": //Simple Goal
+                SimpleGoal sg = new SimpleGoal(name, desc, points);
+                break;
+            case "2":
+                EternalGoal eg = new EternalGoal(name, desc, points);
+                break;
+            case "3":
+                int target = StringtoIntErrorCheck("What is your target for how many times to complete the goal?");
+                int bonus = StringtoIntErrorCheck("When you reach your target, how many bonus points should you get?");
+                ChecklistGoal cg = new ChecklistGoal(name, desc, points, target, bonus);
+                break;
+        }
+    }
