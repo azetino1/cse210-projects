@@ -1,6 +1,4 @@
-namespace ExerciseTracking
-{
-    public class Running : Activity
+        public class Running : Activity
     {
         private double Distance { get; }
 
@@ -13,4 +11,3 @@ namespace ExerciseTracking
         public override double GetSpeed() => (Distance / Duration) * 60;
         public override double GetPace() => Duration / Distance;
     }
-}
