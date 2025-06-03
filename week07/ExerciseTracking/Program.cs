@@ -10,7 +10,9 @@ class Program
         new Cycling(new DateTime(2025, 6, 2), 45, 15.0),
         new Swimming(new DateTime(2025, 6, 2), 20, 10)
         };
-
-
-
+        foreach (var activity in activities)
+        {
+        Console.WriteLine(activity.GetSummary());
+        }
+    }
 }
