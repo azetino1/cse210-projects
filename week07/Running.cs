@@ -1,13 +1,16 @@
-public class Running : Activity
+namespace ExerciseTracking
 {
-    private double Distance { get; }
-
-    public Running(DateTime date, int duration, double distance) : base(date, duration)
+    public class Running : Activity
     {
-        Distance = distance;
-    }
+        private double Distance { get; }
 
-    public override double GetDistance() => Distance;
-    public override double GetSpeed() => (Distance / Duration) * 60;
-    public override double GetPace() => Duration / Distance;
+        public Running(DateTime date, int duration, double distance) : base(date, duration)
+        {
+            Distance = distance;
+        }
+
+        public override double GetDistance() => Distance;
+        public override double GetSpeed() => (Distance / Duration) * 60;
+        public override double GetPace() => Duration / Distance;
+    }
 }
