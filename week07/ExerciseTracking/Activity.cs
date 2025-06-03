@@ -10,5 +10,10 @@ abstract class Activity
         Date = date;
         Duration = duration;
     }
+    // Abstract methods for calculations
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
+
 
 
