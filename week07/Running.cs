@@ -6,5 +6,7 @@ class Running : Activity
     {
         Distance = distance;
     }
-
+    public override double GetDistance() => Distance;
+    public override double GetSpeed() => (Distance / Duration) * 60;
+    public override double GetPace() => Duration / Distance;
 }
