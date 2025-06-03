@@ -1,4 +1,4 @@
-class Running : Activity
+public class Running : Activity
 {
     private double Distance { get; }
 
