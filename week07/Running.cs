@@ -1,4 +1,4 @@
-public class Running : Activity {}
+public class Running : Activity
 {
     private double Distance { get; }
 
@@ -6,6 +6,7 @@ public class Running : Activity {}
     {
         Distance = distance;
     }
+
     public override double GetDistance() => Distance;
     public override double GetSpeed() => (Distance / Duration) * 60;
     public override double GetPace() => Duration / Distance;
